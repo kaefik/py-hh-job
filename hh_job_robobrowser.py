@@ -18,7 +18,7 @@ browser.open('https://kazan.hh.ru/account/login?backurl=%2F')
 # Get the signup form
 signup_form = browser.get_form() # data-qa="account-login-form"
 
-print(signup_form)         # <RoboForm user[name]=, user[email]=, ...
+#print(signup_form)         # <RoboForm user[name]=, user[email]=, ...
 
 # Inspect its values
 # signup_form['authenticity_token'].value     # 6d03597 ...
@@ -43,5 +43,9 @@ src = str(browser.parsed())
 #print(src)
 
 browser.open('https://kazan.hh.ru/applicant/resumes')
-print(browser.parsed())
+#print(browser.parsed())
 
+# get buttons refresh resume
+but = browser.select('.bloko-icon-link')
+print(but)
+print(len(but))
